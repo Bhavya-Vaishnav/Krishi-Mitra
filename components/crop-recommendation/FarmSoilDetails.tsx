@@ -4,7 +4,7 @@ import { Camera } from 'lucide-react-native';
 
 export function FarmSoilDetails() {
   return (
-    <View className="mb-4 rounded-3xl bg-green-50 p-5">
+    <View className="mb-4 rounded-3xl bg-green-100 p-5">
       <Text className="mb-2 text-lg font-bold text-gray-900">Step 1: Farm & Soil Details</Text>
       <Text className="mb-0.5 text-base text-gray-500">Soil Type</Text>
       <TextInput

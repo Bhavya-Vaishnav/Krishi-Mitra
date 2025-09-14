@@ -62,7 +62,6 @@ export default function Screen() {
     </SafeAreaView>
   );
 }
-// export default CropRecommendationScreen;
 
 const THEME_ICONS = {
   light: SunIcon,

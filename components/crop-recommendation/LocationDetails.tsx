@@ -3,7 +3,7 @@ import { View, Text, TextInput } from 'react-native';
 
 export function LocationDetails() {
   return (
-    <View className="mb-6 rounded-3xl bg-green-50 p-5">
+    <View className="mb-6 rounded-3xl bg-green-100 p-5">
       <Text className="mb-2 text-lg font-bold text-gray-900">Step 2: Location</Text>
       <Text className="mb-0.5 text-base text-gray-500">Location</Text>
       <TextInput
