@@ -15,7 +15,7 @@ export function MarketPriceCard({ crop, price, min, max }: MarketPriceCardProps)
         <Text className="mb-1 text-lg font-medium text-gray-800">{crop}</Text>
       </View>
       <View className='flex-col items-end'>
-        <Text className="text-2xl font-medium text-gray-700">{price}</Text>
+        <Text className="text-  xl font-medium text-gray-700">{price}</Text>
         <Text className="text-xs text-green-700">
           Min: {min} | Max: {max}
         </Text>
