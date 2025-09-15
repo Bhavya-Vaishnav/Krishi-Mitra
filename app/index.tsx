@@ -55,7 +55,7 @@ export default function Screen() {
         <Text className="mb-2.5 mt-3 px-5 text-3xl font-bold text-gray-900">Welcome, Farmer!</Text>
         <WeatherUpdate />
         <FeatureGrid />
-        <Text className="mb-2 mt-0 px-5 text-xl font-bold text-gray-900">More Tools</Text>
+        <Text className="mb-2 mt-0 px-5 text-xl font-bold text-gray-900">Additional Features</Text>
         <MoreTools />
       </ScrollView>
       <BottomNav />
