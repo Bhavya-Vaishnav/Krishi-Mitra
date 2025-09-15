@@ -28,14 +28,10 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.jpg"
     },
     "plugins": [
-      "expo-router",
-      "expo-location",
-      {
-        "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
-      }
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
@@ -44,7 +40,8 @@
       "router": {},
       "eas": {
         "projectId": "e0b9c89a-7a36-47a8-bcdf-e41e40dd365c"
-      }
+      },
+      "WEATHER_API_KEY": "2f7381dd9e3149e0b2735757251509"
     }
   }
 }

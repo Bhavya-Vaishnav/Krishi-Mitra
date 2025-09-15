@@ -7,13 +7,9 @@ import { MoonStarIcon, StarIcon, SunIcon } from 'lucide-react-native';
 import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 import { Image, type ImageStyle, View, SafeAreaView, ScrollView } from 'react-native';
-import { HomeHeader } from '@/components/home/HomeHeader';
-import { FeatureGrid } from '@/components/home/FeatureGrid';
-import { WeatherUpdate } from '@/components/home/WeatherUpdate';
-import { MoreTools } from '@/components/home/MoreTools';
-import { BottomNav } from '@/components/home/BottomNav';import CropRecommendationScreen from './CropRecommendationScreen';
+import HomeHeader from '@/components/home/HomeHeader';
 
-
+import { LanguageContext } from '../lib/LanguageContext';
 
 const LOGO = {
   light: require('@/assets/images/react-native-reusables-light.png'),
@@ -42,8 +38,20 @@ const IMAGE_STYLE: ImageStyle = {
   width: 76,
 };
 
+import { FeatureGrid } from '@/components/home/FeatureGrid';
+import { WeatherUpdate } from '@/components/home/WeatherUpdate';
+import { MoreTools } from '@/components/home/MoreTools';
+import { BottomNav } from '@/components/home/BottomNav';
+
 export default function Screen() {
   const { colorScheme } = useColorScheme();
+  const { language } = React.useContext(LanguageContext);
+
+  // Simple translation map
+  const t = {
+    welcome: language === 'hi' ? 'स्वागत है, किसान!' : 'Welcome, Farmer!',
+    features: language === 'hi' ? 'अतिरिक्त सुविधाएँ' : 'Additional Features',
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -52,10 +60,10 @@ export default function Screen() {
         className="flex-1"
         contentContainerStyle={{ paddingBottom: 80 }}
         showsVerticalScrollIndicator={false}>
-        <Text className="mb-2.5 mt-3 px-5 text-3xl font-bold text-gray-900">Welcome, Farmer!</Text>
+        <Text className="mb-2.5 mt-3 px-5 text-3xl font-bold text-gray-900">{t.welcome}</Text>
         <WeatherUpdate />
         <FeatureGrid />
-        <Text className="mb-2 mt-0 px-5 text-xl font-bold text-gray-900">Additional Features</Text>
+        <Text className="mb-2 mt-0 px-5 text-xl font-bold text-gray-900">{t.features}</Text>
         <MoreTools />
       </ScrollView>
       <BottomNav />
